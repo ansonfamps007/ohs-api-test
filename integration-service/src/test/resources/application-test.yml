@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: integration-service
+app:
+  file:
+    path: ${INTEGRATION_FILE_PATH:D:\\integration-file\\order-integration.csv}
+    processed-order: ${PROCESSED_ORDER_FILE_PATH:D:\\integration-file\\processed-orders.json}

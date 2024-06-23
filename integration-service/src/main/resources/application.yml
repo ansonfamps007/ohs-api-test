@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: integration-service
+server:
+  port: 9090
+
+user:
+  address: localhost
+  port: 50054
+order:
+  address: localhost
+  port: 50053
+logging:
+  level:
+    com:
+      integration:
+        service: ERROR
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: always
+app:
+  file:
+    path: ${INTEGRATION_FILE_PATH:D:\\integration-file\\order-integration.csv}
+    processed-order: ${PROCESSED_ORDER_FILE_PATH:D:\\integration-file\\processed-orders.json}
